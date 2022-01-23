@@ -1,1 +1,2 @@
 Total LaBamba time in minutes: 14102
+Total number of bedpres: 159

@@ -23,4 +23,4 @@ result = f"Total LaBamba time in minutes: {total_labamba_time}"
 print(result)
 
 with open("results/abakus_statistics.txt", "a") as f:
-    f.write(result)
+    f.write(result + "\n")
