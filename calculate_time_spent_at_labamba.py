@@ -19,5 +19,8 @@ for event in labamba_event_list:
     print(duration)
     total_labamba_time += duration
 
-print(f"Total LaBamba time in minutes: {total_labamba_time}")
+result = f"Total LaBamba time in minutes: {total_labamba_time}"
+print(result)
 
+with open("results/abakus_statistics.txt", "a") as f:
+    f.write(result)
