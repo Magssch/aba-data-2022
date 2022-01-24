@@ -27,7 +27,7 @@ while response_dict.get("next", None) is not None:
     response_dict = response.json()
 
 with open("results/bedpres_list.json", "w") as fp:
-    json.dump({'events': bedpres_event_list}, fp)
+    json.dump({'events': bedpres_event_list}, fp, sort_keys=True, indent=4)
 
 result = f"Total number of bedpres: {bedpres_count}"
 print(result)

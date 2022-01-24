@@ -29,4 +29,4 @@ while response_dict.get("next", None) is not None:
     response_dict = response.json()
 
 with open("results/labamba_events_list.json", "w") as fp:
-    json.dump({'events': labamba_event_list}, fp)
+    json.dump({'events': labamba_event_list}, fp, sort_keys=True, indent=4)
