@@ -13,7 +13,7 @@ def is_bedpres(event):
 
 bedpres_event_list = []
 bedpres_count = 0
-response = requests.get('https://lego-staging.abakus.no/api/v1/events/?date_after=2017-02-18&date_before=2022-01-23&page_size=60')
+response = requests.get('https://lego-staging.abakus.no/api/v1/events/?date_after=2017-02-18&date_before=2022-03-07')
 response_dict = response.json()
 
 while response_dict.get("next", None) is not None:

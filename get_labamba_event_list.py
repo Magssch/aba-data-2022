@@ -15,7 +15,7 @@ def is_actual_labamba_event(event):
 
 labamba_event_list = []
 labamba_event_count = 0
-response = requests.get('https://lego-staging.abakus.no/api/v1/events/?date_after=2017-02-18&date_before=2022-01-23&page_size=60')
+response = requests.get('https://lego-staging.abakus.no/api/v1/events/?date_after=2017-02-18&date_before=2022-03-07')
 response_dict = response.json()
 
 while response_dict.get("next", None) is not None:
