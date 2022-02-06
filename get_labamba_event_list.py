@@ -7,7 +7,7 @@ labamba_event_type = "party"
 def is_actual_labamba_event(event):
     if event["eventType"] != labamba_event_type:
         return False
-    if "AVLYST" in event["title"]:
+    if "avlyst" in event["title"].lower():
         return False
     if "labamba" not in event["title"].lower() and "labamba" not in event["description"].lower():
         return False
