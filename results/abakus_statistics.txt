@@ -1,0 +1,5 @@
+Total LaBamba time in minutes: 14881
+Total number of bedpres: 175
+Number of yearly events: {2017: 124, 2018: 161, 2019: 205, 2020: 184, 2021: 194, 2022: 31}
+Number of yearly events: {2017: 143, 2018: 161, 2019: 205, 2020: 184, 2021: 194, 2022: 39}
+Number of yearly bedpres: {2017: 31, 2018: 43, 2019: 36, 2020: 31, 2021: 33, 2022: 8}
