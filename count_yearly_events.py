@@ -1,7 +1,8 @@
 import requests
 import json
 
-# Abakus anniversary date: lørdag 18. mars 2017
+# Spørringen nedenfor gir per nå en liste med alle arrangementer etter forrige jubileum
+abakus_api_query = 'https://lego-staging.abakus.no/api/v1/events/?date_after=2017-02-18&date_before=2022-03-07'
 
 def event_was_cancelled(event):
     if "avlyst" in event["title"].lower():
@@ -10,7 +11,7 @@ def event_was_cancelled(event):
 
 event_list = []
 yearly_event_count = {}
-response = requests.get('https://lego-staging.abakus.no/api/v1/events/?date_after=2017-01-01&date_before=2022-03-10')
+response = requests.get(abakus_api_query)
 response_dict = response.json()
 
 while response_dict.get("next", None) is not None:

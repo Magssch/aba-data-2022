@@ -1,8 +1,9 @@
 import requests
 import json
 
-# Abakus anniversary date: lørdag 18. mars 2017
 bedpres_event_types = ["company_presentation", "alternative_presentation"]
+# Spørringen nedenfor gir per nå en liste med alle arrangementer etter forrige jubileum
+abakus_api_query = 'https://lego-staging.abakus.no/api/v1/events/?date_after=2017-02-18&date_before=2022-03-07'
 
 def is_bedpres(event):
     if event["eventType"] not in bedpres_event_types:
@@ -13,7 +14,7 @@ def is_bedpres(event):
 
 bedpres_event_list = []
 bedpres_count = 0
-response = requests.get('https://lego-staging.abakus.no/api/v1/events/?date_after=2017-02-18&date_before=2022-03-07')
+response = requests.get(abakus_api_query)
 response_dict = response.json()
 
 while response_dict.get("next", None) is not None:
